@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --bg: #dcd8ce;
+  --panel: #f7f6f2;
+  --border: #6f6f6f;
+  --text: #2a2a2a;
+  --muted: #777;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'VT323', monospace;
+  color: var(--text);
+}
+
+.panel {
+  width: 360px;
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--muted);
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+.menu li {
+  opacity: 0.6;
+}
+
+.menu li.active {
+  opacity: 1;
+}
+
+.menu li.active::before {
+  content: "▶ ";
+}
