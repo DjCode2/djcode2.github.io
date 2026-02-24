@@ -1,70 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
-  --bg: #dcd8ce;
+  --bg: #e4dfd4;
   --panel: #f7f6f2;
   --border: #6f6f6f;
-  --text: #2a2a2a;
+  --text: #2a2a2a;  /*couleur du texte global*/
   --muted: #777;
+  --accent: #444;
 }
 
 body {
   margin: 0;
-  height: 100vh;
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: 'VT323', monospace;
+  background: var(--bg);
   color: var(--text);
 }
 
-.panel {
-  width: 360px;
-  padding: 24px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-}
-
-header {
+.container {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 18px;
+  height: 100vh;
 }
 
-h1 {
-  font-size: 26px;
-  margin: 0;
-  text-transform: lowercase;
+/* Menu vertical */
+.sidebar {
+  width: 180px;
+  background: var(--panel);
+  border-right: 2px solid var(--border);
+  padding: 24px 16px;
+  box-sizing: border-box;
 }
 
-.subtitle {
-  font-size: 16px;
-  color: var(--muted);
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.4;
+.sidebar h2 {
+  font-size: 36px;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
-.menu {
+.sidebar ul {
   list-style: none;
   padding: 0;
-  margin: 0;
-  font-size: 18px;
 }
 
-.menu li {
+.sidebar li {
+  margin-bottom: 14px;
   opacity: 0.6;
+  cursor: pointer;
 }
 
-.menu li.active {
+.sidebar li.active {
   opacity: 1;
+  text-decoration: underline;
 }
 
-.menu li.active::before {
-  content: "▶ ";
+.sidebar li a {
+  font-size: 20px; 
+  color: var(--text); /* facultatif : couleur du texte */
+  text-decoration: none; /* enlever le soulignement par défaut */
+}
+
+/* Contenu principal */
+.content {
+  flex: 1;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.content header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 22px;
+}
+
+.content h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: var(--muted);
+}
+
+.content p {
+  font-size: 22px;
+  line-height: 1.4;
 }
