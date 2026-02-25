@@ -58,6 +58,49 @@ body {
   text-decoration: none; /* enlever le soulignement par défaut */
 }
 
+/*contenu article*/
+.article-card {
+  display: block;
+  width: 100%;
+  background: var(--panel);
+  border: 2px solid var(--border);
+  padding: 20px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+
+  /* optionnel : effet hover */
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.article-card:hover {
+  background: var(--panel-hover, #e4dfd4b0);
+  border-color: var(--accent, #ff4d4d);
+}
+
+.article-title {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.article-desc {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+
+.link {
+  color: inherit;          /* garde la couleur du texte */
+  text-decoration: none;   /* enlève le soulignage */
+}
+
+.link:hover {
+  text-decoration: none;   /* évite le soulignage au hover */
+  color: inherit;          /* évite le bleu au hover */
+}
+
 /* Contenu principal */
 .content {
   flex: 1;
@@ -86,4 +129,3 @@ body {
   font-size: 22px;
   line-height: 1.4;
 }
-
