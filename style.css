@@ -101,6 +101,11 @@ body {
   color: inherit;          /* évite le bleu au hover */
 }
 
+
+.schema-kerberos svg text {
+    font-family: 'VT323', monospace !important;
+}
+
 /* Contenu principal */
 .content {
   flex: 1;
